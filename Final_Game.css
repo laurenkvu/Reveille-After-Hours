@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#menu{
+    display: none;
+}
+#menuUnlocked{
+    display: none;
+}
+#complete{
+    display: none;
+    z-index: -1;
+}
+#oneBone{
+    display: none;
+    position: absolute;
+    top: 305px;
+    left: 155px;
+    z-index: 1;
+}
+#twoBone{
+    display: none;
+    position: absolute;
+    top: 305px;
+    left: 472px;
+    z-index: 1;
+}
+#threeBone{
+    display: none;
+    position: absolute;
+    top: 302px;
+    left: 790px;
+    z-index: 1;
+}
+#nextLevel{
+    display: none;
+    position: absolute;
+    top: 500px;
+    left: 652px;
+    z-index: 1;
+}
+#menuButton{
+    display: none;
+    position: absolute;
+    top: 500px;
+    left: 370px;
+    z-index: 1;
+}
+#Level1{
+    z-index: -1;
+    display: none;
+}
+#Level2{
+    z-index: -1;
+    display: none;
+}
+#LevelSwitch{
+    position:absolute;
+}
+.button{
+    position:absolute;
+}
+#Pressed{
+    position:absolute;
+}
+#bottom_of_computer{
+    position:absolute;
+    top: 520px;
+    left: 652px;
+    z-index: 2;
+}
+#computerbone{
+    position:absolute;
+    top: 540px;
+    left: 740px;
+    z-index: 2;
+}
+.button{
+    position: absolute;
+}
+#pencil_bag{
+    z-index: 3;
+    position:absolute;
+    top: 510px;
+    left: 300px;
+}
+#table{
+    position:absolute;
+    top: 500px;
+    left: 290px;
+    z-index: 1;
+}
+#tablebone{
+    position:absolute;
+    z-index: 3;
+    top: 700px;
+    left: 820px;
+}
+.button{
+    position: absolute;
+}
+#top_of_computer{
+    position:absolute;
+    top: 500px;
+    left: 650px;
+    z-index: 2;
+}
+.button{
+    position: absolute;
+}
+#whiteboardbone{
+    position:absolute;
+    top: 446px;
+    left: 400px;
+}
+.button{
+    position: absolute;
+}
+#flashlight{
+    position: absolute;
+    top: 550px;
+    left: 342px;
+    z-index:2;
+}
+.button{
+    position: absolute;
+}
+#bonecounter{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 6;
+}
+#bone1{
+    float: left;
+    display: none;
+}
+#bone2{
+    float:left;
+    display: none;
+}
+#bone3{
+    float:left;
+    display: none;
+}
+#bannerbone{
+    position: absolute;
+    top: 750px;
+    left: 1070px;
+    display: none;
+    z-index: 3;
+}
+#elevatorbone{
+    position: absolute;
+    top: 310px;
+    left: 500px;
+    display: none;
+    z-index: 3;
+}
+#fallenPlant{
+    position: absolute;
+    top: 645px;
+    left: 285px;
+    display: none;
+    z-index: 4;
+}
+#flashlightLight{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#idCard{
+    position: absolute;
+    top: 735px;
+    left: 499px;
+    display: none;
+    z-index: 5;
+    transform: rotate(39deg);
+}
+#plantbone{
+    position: absolute;
+    top: 745px;
+    left: 325px;
+    display: none;
+    z-index: 3;
+    transform: rotate(75deg);
+}
+#standingPlant{
+    position: absolute;
+    top: 310px;
+    left: 250px;
+    display: none;
+    z-index: 4;
+}
+.button{
+    position:absolute;
+}
