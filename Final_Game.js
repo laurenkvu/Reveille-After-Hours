@@ -1,3 +1,4 @@
+Final_Game.js
 document.getElementById("LevelSwitch").addEventListener("click", changeSceneToLevel2);
 document.getElementById("computerbone").addEventListener("click", function() {collectBone("computerbone")});
 document.getElementById("tablebone").addEventListener("click", function() {collectBone("tablebone")});
@@ -5,15 +6,39 @@ document.getElementById("whiteboardbone").addEventListener("click", function() {
 document.getElementById("standingPlant").addEventListener("click", knockPlant);
 document.getElementById("flashlight").addEventListener("click", levelComplete);
 document.getElementById("pressStart").addEventListener("click", startGame)
-document.getElementById("menu").addEventListener("click", toLevel1)
+//document.getElementById("menu").addEventListener("click", toLevel1)
 document.getElementById("nextLevel").addEventListener("click", changeSceneToLevel2)
 document.getElementById("menuButton").addEventListener("click", toNewMenu)
 document.getElementById("elevatorbone").addEventListener("click", function() {collectBone("elevatorbone")});
 document.getElementById("bannerbone").addEventListener("click", function() {collectBone("bannerbone")});
 document.getElementById("plantbone").addEventListener("click", function() {collectBone("plantbone")});
-document.getElementById("idCard").addEventListener("click", levelComplete)
+document.getElementById("idCard").addEventListener("click", levelComplete);
+document.getElementById("Level2StartUnlocked").addEventListener("click", toLevel2NewMenu);
+document.getElementById("Level1StartUnlocked").addEventListener("click", toLevel1NewMenu);
+document.getElementById("Level1Start").addEventListener("click", toLevel1);
 
 let numBones1 = 0
+
+function toLevel1NewMenu() {
+    document.getElementById("menuUnlocked").style.display = "none";
+    let Level1 = ["Level1", "bottom_of_computer", "computerbone", "pencil_bag", "table", "tablebone", "top_of_computer", "whiteboardbone"];
+    for (let i = 0; i < Level1.length; i++) {
+        document.getElementById(Level1[i]).style.display = "block";
+    }
+
+    let draggableItems = document.querySelectorAll('.cover-box');
+    draggableItems.forEach(item => {
+        item.classList.remove('found'); // allow dragging again
+    });
+}
+
+function toLevel2NewMenu() {
+    document.getElementById("menuUnlocked").style.display = "none";
+    let Level2 = ["Level2", "bannerbone", "elevatorbone", "flashlightLight", "plantbone", "standingPlant"];
+    for (let i = 0; i < Level2.length; i++) {
+        document.getElementById(Level2[i]).style.display = "block";
+    }
+}
 
 function collectBone(bone) {
     numBones1++;
@@ -38,15 +63,23 @@ function toLevel1() {
     document.getElementById("menu").style.display = "none";
     let Level1 = ["Level1", "bottom_of_computer", "computerbone", "pencil_bag", "table", "tablebone", "top_of_computer", "whiteboardbone"];
     for (let i = 0; i < Level1.length; i++) {
-            document.getElementById(Level1[i]).style.display = "block";
-        }
+        document.getElementById(Level1[i]).style.display = "block";
+    }
+    let draggableItems = document.querySelectorAll('.cover-box');
+    draggableItems.forEach(item => {
+        item.classList.remove('found'); // allow dragging again
+    });
 }
 
 function levelComplete() {
     let Level1 = ["Level1", "bottom_of_computer", "computerbone", "pencil_bag", "table", "tablebone", "top_of_computer", "whiteboardbone"]; 
-    let Level2 = ["Level2", "bannerbone", "elevatorbone", "flashlightLight", "plantbone", "standingPlant"];
+    let Level2 = ["Level2", "bannerbone", "elevatorbone", "flashlightLight", "plantbone", "standingPlant", "fallenPlant", "idCard"];
     let complete = ["complete", "nextLevel", "menuButton"]
     
+    document.getElementById("pencil_bag").style.top = '510px';
+    document.getElementById("pencil_bag").style.left = '300px';
+
+
     setTimeout(() => {
         for (let i = 0; i < Level1.length; i++) {
             document.getElementById(Level1[i]).style.display = "none";
